@@ -1,23 +1,30 @@
 import React from 'react';
+import onDeli from '../imagens/onDelivery.png';
 
 function Login() {
   return (
-    <div>
+    <main className="all-login">
       <header>
-        header
+        <img src={ onDeli } alt="logo" id="logoUp-login" width="150" height="auto" />
       </header>
-      <form className="pure-form pure-form-stacked">
-        <fieldset>
-          <label htmlFor="stacked-celular">
-            Celular
-            <input type="celular" id="stacked-celular" placeholder="(85) 99990-0023" />
-          </label>
-          <button type="submit" className="pure-button pure-button-primary">
-            Vamos Lá
-          </button>
-        </fieldset>
-      </form>
-    </div>
+      <section className="section-login">
+        <img src={ onDeli } alt="logo" id="logoCenter-login" width="150" />
+        <div id="label-input-login">
+          {/* <label htmlFor="input-login" id="label-login">
+            Celular */}
+          {/* <br /> */}
+          <input
+            type="celular"
+            id="input-login"
+            placeholder="(85) 99990-0023"
+          />
+          {/* </label> */}
+        </div>
+        <button type="submit" id="submit-login">
+          Vamos lá!
+        </button>
+      </section>
+    </main>
   );
 }
 
