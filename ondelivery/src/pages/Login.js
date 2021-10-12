@@ -4,7 +4,22 @@ import InputForm from '../components/InputForm';
 import onDeli from '../imagens/onDelivery.png';
 
 class Login extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      inputLogin: '',
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({
+      [event.target.name]: event.target.value,
+    });
+  }
+
   render() {
+    const { inputLogin } = this.state;
     return (
       <main className="all-login">
         <header>
@@ -16,9 +31,12 @@ class Login extends React.Component {
             <InputForm
               label="Celular"
               type="text"
-              id="input-login"
+              idInput="input-login"
+              idLabel="label-login"
               placeholder="(85) 99990-0023"
-              name="input-login"
+              name="inputLogin"
+              value={ inputLogin }
+              onChange={ this.handleChange }
             />
           </div>
           <ButtonForm label="Vamos lá!" id="submit-login" />
