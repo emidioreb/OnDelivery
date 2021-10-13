@@ -14,10 +14,11 @@ Aplicativo Web desenvolvido para restaurantes/pizzarias/hamburguerias/bares com 
 ### Desenvolvimento das telas do Usuário.
 #### - Tela de Login 
  
-  - [ ] 1 - Input do Número de celular data-testid="phone-input"
-  - [ ] 2 - botão "Vamos Lá" deve possuir o atributo data-testid="login-submit-btn"
-  - [ ] 3 - Logo no canto superior esquerdo deve possuir o atributo data-testid="logoUpLeft"
-  - [ ] 4 - Logo marca no centro da página deve possuir o atributo data-testid="logoCenter"
+  - [ x ] 1 - Input do Número de celular"
+  - [ x ] 2 - botão "Vamos Lá".
+  - [ x ] 3 - Logo no canto superior esquerdo.
+  - [ x ] 4 - Logo marca no centro da página.
+  - [ x ] 5 - Responsividade
    
   
  ---
