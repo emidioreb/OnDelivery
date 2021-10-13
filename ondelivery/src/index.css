@@ -12,22 +12,21 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color:#E64519;
-  ;
 }
 /* .all-login{
   background-color: aqua;
 } */
 
-.section-login{
-  /* border: 2px solid black; */
+/* .section-login{
+  border: 2px solid black;
   display: flex;
   justify-content: center;
   margin: 120px 0px;
   padding: 100px 40px;
   flex-direction: column;
-}
+} */
 
-#submit-login{
+/* #submit-login{
   background-color: #E5E5E5;
   border: 10px solid #E5E5E5;
   padding: 1px 20px;
@@ -74,4 +73,4 @@ input,::placeholder{
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
-}
+} */

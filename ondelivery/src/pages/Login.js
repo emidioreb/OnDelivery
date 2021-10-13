@@ -2,6 +2,7 @@ import React from 'react';
 import ButtonForm from '../components/ButtonForm';
 import InputForm from '../components/InputForm';
 import onDeli from '../imagens/onDelivery.png';
+import '../css/Login.css';
 
 class Login extends React.Component {
   constructor() {
@@ -26,20 +27,24 @@ class Login extends React.Component {
           <img src={ onDeli } alt="logo" id="logoUp-login" width="150" height="auto" />
         </header>
         <section className="section-login">
-          <img src={ onDeli } alt="logo" id="logoCenter-login" width="150" />
+          <div id="positionImage">
+            <img src={ onDeli } alt="logo" id="logoCenter-login" width="150" />
+          </div>
           <div id="label-input-login">
             <InputForm
+              classNameInput="input-login"
               label="Celular"
               type="text"
-              idInput="input-login"
-              idLabel="label-login"
+              classNameLabel="label-login"
               placeholder="(85) 99990-0023"
               name="inputLogin"
               value={ inputLogin }
               onChange={ this.handleChange }
             />
           </div>
-          <ButtonForm label="Vamos lá!" id="submit-login" />
+          <div id="positionButton">
+            <ButtonForm label="Vamos lá!" id="submit-login" />
+          </div>
         </section>
       </main>
     );

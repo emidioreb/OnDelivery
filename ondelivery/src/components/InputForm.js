@@ -4,22 +4,22 @@ import PropTypes from 'prop-types';
 class InputForm extends React.Component {
   render() {
     const {
-      type, idInput, name, placeholder,
-      label, idLabel, value, onChange,
+      type, name, placeholder,
+      value, onChange, classNameInput,
     } = this.props;
     return (
       <div>
-        <label htmlFor={ name } id={ idLabel }>
-          { label }
-          <input
-            type={ type }
-            name={ name }
-            value={ value }
-            onChange={ onChange }
-            id={ idInput }
-            placeholder={ placeholder }
-          />
-        </label>
+        {/* <label htmlFor={ name } className={ classNameLabel }>
+          { label } */}
+        <input
+          type={ type }
+          name={ name }
+          value={ value }
+          onChange={ onChange }
+          className={ classNameInput }
+          placeholder={ placeholder }
+        />
+        {/* </label> */}
       </div>
     );
   }
@@ -27,11 +27,11 @@ class InputForm extends React.Component {
 
 InputForm.propTypes = {
   type: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
+  // label: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  idInput: PropTypes.string.isRequired,
-  idLabel: PropTypes.string.isRequired,
+  classNameInput: PropTypes.string.isRequired,
+  // classNameLabel: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };
