@@ -1,6 +1,9 @@
 /* .all-login{
   background-color: aqua;
 } */
+body{
+  background-color: #E64519;
+}
 @media screen and (min-width: 600px){
   .section-login{
     margin-top: 0px !important;
@@ -75,4 +78,11 @@ input,::placeholder{
 #positionImage{
   display: flex;
   justify-content: center;
+}
+
+#cadastro{
+  background-color: #E5E5E5;
+  margin: 40px 20px;
+  border-radius: 40px;
+  padding: 60px 40px 20px 30px;
 }

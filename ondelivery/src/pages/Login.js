@@ -33,7 +33,7 @@ class Login extends React.Component {
           <div id="label-input-login">
             <InputForm
               classNameInput="input-login"
-              label="Celular"
+              // label="Celular"
               type="text"
               classNameLabel="label-login"
               placeholder="(85) 99990-0023"
