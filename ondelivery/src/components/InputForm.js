@@ -5,7 +5,7 @@ class InputForm extends React.Component {
   render() {
     const {
       type, name, placeholder, label, classNameLabel,
-      value, onChange, classNameInput,
+      value, onChange, classNameInput, id,
     } = this.props;
     return (
       <div>
@@ -19,6 +19,7 @@ class InputForm extends React.Component {
             onChange={ onChange }
             className={ classNameInput }
             placeholder={ placeholder }
+            id={ id }
           />
         </label>
       </div>
@@ -27,14 +28,15 @@ class InputForm extends React.Component {
 }
 
 InputForm.propTypes = {
-  type: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
   classNameInput: PropTypes.string.isRequired,
   classNameLabel: PropTypes.string.isRequired,
-  placeholder: PropTypes.string.isRequired,
+  id: PropTypes.isRequired,
+  label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
 };
 
 export default InputForm;

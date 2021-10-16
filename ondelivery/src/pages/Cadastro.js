@@ -7,7 +7,7 @@ class Cadastro extends React.Component {
   render() {
     return (
       <div id="cadastro">
-        <h5>Cadastra-se</h5>
+        <h5>Cadastra-se:</h5>
         <Parte1 />
         <Parte2 />
         <Parte3 />

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ButtonForm from '../components/ButtonForm';
 import InputForm from '../components/InputForm';
 import onDeli from '../imagens/onDelivery.png';
@@ -33,7 +34,7 @@ class Login extends React.Component {
           <div id="label-input-login">
             <InputForm
               classNameInput="input-login"
-              // label="Celular"
+              label="Celular:"
               type="text"
               classNameLabel="label-login"
               placeholder="(85) 99990-0023"
@@ -43,7 +44,9 @@ class Login extends React.Component {
             />
           </div>
           <div id="positionButton">
-            <ButtonForm label="Vamos lá!" id="submit-login" />
+            <Link to="cadastro">
+              <ButtonForm label="Vamos lá!" id="submit-login" />
+            </Link>
           </div>
         </section>
       </main>

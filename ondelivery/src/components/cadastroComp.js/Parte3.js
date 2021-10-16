@@ -7,29 +7,31 @@ class Parte3 extends React.Component {
       <div>
         <div id="ap-bloco">
           <InputForm
-            classNameInput="input-login"
-            label="Mora em ap ?:"
+            classNameInput="input-cadastro"
+            label="Mora em ap ?"
             type="text"
-            classNameLabel="label-login"
+            classNameLabel="label-cadastro"
             placeholder="ap | 1002"
             name="inputCadastroAp"
             // value={ inputCadastroCep }
+            id="inputCadastroAp"
           />
           <InputForm
-            classNameInput="input-login"
+            classNameInput="input-cadastro"
             type="text"
-            classNameLabel="label-login"
-            placeholder="bloco |"
+            classNameLabel="label-cadastro"
+            placeholder="bloco"
             name="inputCadastroBloco"
             // value={ inputCadastroBairro }
+            id="inputCadastroBloco"
           />
         </div>
         <InputForm
-          classNameInput="input-login"
+          classNameInput="input-cadastro"
           label="Celular:"
           type="text"
-          classNameLabel="label-login"
-          placeholder="ap | 1002"
+          classNameLabel="label-cadastro"
+          placeholder="(85)99990-0023"
           name="inputCadastroCelular"
           // value={ inputCadastroCep }
         />
