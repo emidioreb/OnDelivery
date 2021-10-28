@@ -1,8 +1,10 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import InputForm from '../InputForm';
 
 class Parte3 extends React.Component {
   render() {
+    const { ap, nameAp, bloco, nameBloco, celular, nameCelular, onChange } = this.props;
     return (
       <div>
         <div id="ap-bloco">
@@ -12,18 +14,20 @@ class Parte3 extends React.Component {
             type="text"
             classNameLabel="label-cadastro"
             placeholder="ap | 1002"
-            name="inputCadastroAp"
-            // value={ inputCadastroCep }
+            name={ nameAp }
+            value={ ap }
             id="inputCadastroAp"
+            onChange={ onChange }
           />
           <InputForm
             classNameInput="input-cadastro"
             type="text"
             classNameLabel="label-cadastro"
             placeholder="bloco"
-            name="inputCadastroBloco"
-            // value={ inputCadastroBairro }
+            name={ nameBloco }
+            value={ bloco }
             id="inputCadastroBloco"
+            onChange={ onChange }
           />
         </div>
         <InputForm
@@ -32,12 +36,23 @@ class Parte3 extends React.Component {
           type="text"
           classNameLabel="label-cadastro"
           placeholder="(85)99990-0023"
-          name="inputCadastroCelular"
-          // value={ inputCadastroCep }
+          name={ nameCelular }
+          value={ celular }
+          onChange={ onChange }
         />
       </div>
     );
   }
 }
+
+Parte3.propTypes = {
+  ap: PropTypes.isRequired,
+  bloco: PropTypes.isRequired,
+  celular: PropTypes.isRequired,
+  nameAp: PropTypes.isRequired,
+  nameBloco: PropTypes.isRequired,
+  nameCelular: PropTypes.isRequired,
+  onChange: PropTypes.func.isRequired,
+};
 
 export default Parte3;

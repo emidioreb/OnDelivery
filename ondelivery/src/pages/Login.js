@@ -14,9 +14,10 @@ class Login extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(event) {
+  handleChange({ target }) {
+    const { name, value } = target;
     this.setState({
-      [event.target.name]: event.target.value,
+      [name]: value,
     });
   }
 
@@ -38,9 +39,9 @@ class Login extends React.Component {
               type="text"
               classNameLabel="label-login"
               placeholder="(85) 99990-0023"
+              onChange={ this.handleChange }
               name="inputLogin"
               value={ inputLogin }
-              onChange={ this.handleChange }
             />
           </div>
           <div id="positionButton">

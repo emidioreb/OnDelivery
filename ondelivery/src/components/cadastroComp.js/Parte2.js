@@ -1,8 +1,10 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import InputForm from '../InputForm';
 
 class Parte2 extends React.Component {
   render() {
+    const { rua, nameRua, numero, nameNumero, onChange } = this.props;
     return (
       <div>
         <InputForm
@@ -11,8 +13,9 @@ class Parte2 extends React.Component {
           type="text"
           classNameLabel="label-cadastro"
           placeholder="Rúbia Sampaio"
-          name="inputCadastroRua"
-          // value={ inputCadastroRua }
+          name={ nameRua }
+          value={ rua }
+          onChange={ onChange }
         />
         <InputForm
           classNameInput="input-cadastro"
@@ -20,13 +23,22 @@ class Parte2 extends React.Component {
           type="text"
           classNameLabel="label-cadastro"
           placeholder="1234"
-          name="inputCadastroNumero"
-          // value={ inputCadastroNumero }
+          name={ nameNumero }
+          value={ numero }
           id="inputCadastroNumero"
+          onChange={ onChange }
         />
       </div>
     );
   }
 }
+
+Parte2.propTypes = {
+  nameNumero: PropTypes.isRequired,
+  nameRua: PropTypes.isRequired,
+  numero: PropTypes.isRequired,
+  onChange: PropTypes.func.isRequired,
+  rua: PropTypes.isRequired,
+};
 
 export default Parte2;
