@@ -1,4 +1,7 @@
+import PropTypes from 'prop-types';
 import React from 'react';
+import { connect } from 'react-redux';
+import ButtonForm from '../components/ButtonForm';
 import Parte1 from '../components/cadastroComp.js/Parte1';
 import Parte2 from '../components/cadastroComp.js/Parte2';
 import Parte3 from '../components/cadastroComp.js/Parte3';
@@ -17,6 +20,7 @@ class Cadastro extends React.Component {
       celular: '',
     };
     this.handleCadastro = this.handleCadastro.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleCadastro({ target }) {
@@ -24,6 +28,11 @@ class Cadastro extends React.Component {
     this.setState({
       [name]: value,
     });
+  }
+
+  handleClick() {
+    const { dispatchInfo } = this.props;
+    dispatchInfo(this.state);
   }
 
   render() {
@@ -56,8 +65,18 @@ class Cadastro extends React.Component {
           celular={ celular }
           onChange={ this.handleCadastro }
         />
+        <ButtonForm label="Eu tou com fome" />
       </div>
     );
   }
 }
-export default Cadastro;
+
+Cadastro.propTypes = {
+  dispatchInfo: PropTypes.func.isRequired,
+};
+
+const mapDispatchToProps = (dispatch) => ({
+  dispatchInfo: () => dispatch(infoClientes()),
+});
+
+export default connect(null, mapDispatchToProps)(Cadastro);
