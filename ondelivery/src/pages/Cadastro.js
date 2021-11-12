@@ -1,82 +1,98 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import React from 'react';
-import { connect } from 'react-redux';
-import ButtonForm from '../components/ButtonForm';
-import Parte1 from '../components/cadastroComp.js/Parte1';
-import Parte2 from '../components/cadastroComp.js/Parte2';
-import Parte3 from '../components/cadastroComp.js/Parte3';
+import { useHistory } from 'react-router';
+import InputForm from '../components/InputForm';
+import useCadastro from '../hooks/useCadastro';
 
-class Cadastro extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      nome: '',
-      cep: '',
-      bairro: '',
-      rua: '',
-      numero: '',
-      ap: '',
-      bloco: '',
-      celular: '',
-    };
-    this.handleCadastro = this.handleCadastro.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-  }
+function Cadastro() {
+  const { info, setInfo } = useCadastro();
 
-  handleCadastro({ target }) {
-    const { name, value } = target;
-    this.setState({
-      [name]: value,
-    });
-  }
+  const { push } = useHistory();
 
-  handleClick() {
-    const { dispatchInfo } = this.props;
-    dispatchInfo(this.state);
-  }
-
-  render() {
-    const { nome, cep, bairro, rua, numero, ap, bloco, celular } = this.state;
-    return (
-      <div id="cadastro">
-        <h5>Cadastra-se:</h5>
-        <Parte1
-          nameNome="nome"
-          nome={ nome }
-          nameCep="cep"
-          cep={ cep }
-          nameBairro="bairro"
-          bairro={ bairro }
-          onChange={ this.handleCadastro }
+  return (
+    <div id="cadastro">
+      <h5>Cadastra-se:</h5>
+      <div>
+        <InputForm
+          classNameInput="input-cadastro"
+          label="Nome:"
+          type="text"
+          classNameLabel="label-cadastro"
+          placeholder="José da Silva"
+          onChange={ ({ target }) => setInfo({ ...info, nome: target.value }) }
         />
-        <Parte2
-          nameRua="rua"
-          rua={ rua }
-          nameNumero="numero"
-          numero={ numero }
-          onChange={ this.handleCadastro }
-        />
-        <Parte3
-          nameAp="ap"
-          ap={ ap }
-          nameBloco="bloco"
-          bloco={ bloco }
-          nameCelular="celular"
-          celular={ celular }
-          onChange={ this.handleCadastro }
-        />
-        <ButtonForm label="Eu tou com fome" />
+        <div id="cep-bairro">
+          <InputForm
+            classNameInput="input-cadastro"
+            label="CEP:"
+            type="text"
+            classNameLabel="label-cadastro"
+            placeholder="00.000-000"
+            id="inputCadastroCep"
+            onChange={ ({ target }) => setInfo({ ...info, cep: target.value }) }
+          />
+          <InputForm
+            classNameInput="input-cadastro"
+            label="Bairro:"
+            type="text"
+            classNameLabel="label-cadastro"
+            placeholder="Centro"
+            id="inputCadastroBairro"
+            onChange={ ({ target }) => setInfo({ ...info, bairro: target.value }) }
+          />
+        </div>
       </div>
-    );
-  }
+      <div>
+        <InputForm
+          classNameInput="input-cadastro"
+          label="Rua:"
+          type="text"
+          classNameLabel="label-cadastro"
+          placeholder="Rúbia Sampaio"
+          onChange={ ({ target }) => setInfo({ ...info, rua: target.value }) }
+        />
+        <InputForm
+          classNameInput="input-cadastro"
+          label="Número:"
+          type="text"
+          classNameLabel="label-cadastro"
+          placeholder="1234"
+          id="inputCadastroNumero"
+          onChange={ ({ target }) => setInfo({ ...info, numero: target.value }) }
+        />
+      </div>
+      <div>
+        <div id="ap-bloco">
+          <InputForm
+            classNameInput="input-cadastro"
+            label="Mora em ap ?"
+            type="text"
+            classNameLabel="label-cadastro"
+            placeholder="ap | 1002"
+            id="inputCadastroAp"
+            onChange={ ({ target }) => setInfo({ ...info, ap: target.value }) }
+          />
+          <InputForm
+            classNameInput="input-cadastro"
+            type="text"
+            classNameLabel="label-cadastro"
+            placeholder="bloco"
+            id="inputCadastroBloco"
+            onChange={ ({ target }) => setInfo({ ...info, bloco: target.value }) }
+          />
+        </div>
+        <InputForm
+          classNameInput="input-cadastro"
+          label="Celular:"
+          type="text"
+          classNameLabel="label-cadastro"
+          placeholder="(85)99990-0023"
+          onChange={ ({ target }) => setInfo({ ...info, celular: target.value }) }
+        />
+      </div>
+      <button type="button" onClick={ () => push('/cardapio') }>Eu tou com fome</button>
+    </div>
+  );
 }
 
-Cadastro.propTypes = {
-  dispatchInfo: PropTypes.func.isRequired,
-};
-
-const mapDispatchToProps = (dispatch) => ({
-  dispatchInfo: () => dispatch(infoClientes()),
-});
-
-export default connect(null, mapDispatchToProps)(Cadastro);
+export default Cadastro;
