@@ -1,16 +1,21 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { CadastroProvider } from './hooks/useCadastro';
 import {
   Login,
   Cadastro,
-} from './pages';
+  Cardapio,
+} from './pages/index';
 
 function App() {
   return (
-    <Switch>
-      <Route exact path="/" component={ Login } />
-      <Route exact path="/cadastro" component={ Cadastro } />
-    </Switch>
+    <CadastroProvider>
+      <Switch>
+        <Route exact path="/" component={ Login } />
+        <Route exact path="/cadastro" component={ Cadastro } />
+        <Route exact path="/cardapio" component={ Cardapio } />
+      </Switch>
+    </CadastroProvider>
   );
 }
 
