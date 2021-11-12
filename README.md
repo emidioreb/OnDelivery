@@ -3,27 +3,27 @@ Aplicativo Web desenvolvido para restaurantes/pizzarias/hamburguerias/bares com 
 
 ## Sumário
 * O que deverá ser desenvolvido no projeto.
+* Tecnologias utilizadas.
 * Protótipo de projeto.
 * Requisitos do projeto.
 
 ## O que devera ser desenvolvido no projeto.
-
+Seŕa desenvolvido um app web delivery para estabelecimentos de pequeno/médio porte com intuito de solucionar o problema de inserção dessas empresas no mercado digital. O app será desenvolvido em duas grandes frentes. O primeiro desenvolvimento é focado para o usuário final, aquele que vai efetivamente fazer as compras. E o segundo desenvolvimento é para o estabelecimentos que esta vendendo. O estabelecimentos poderão acompanhar os seus resultados tudo por essa plataforma.
 ## Protótipo do projeto.
+https://www.figma.com/file/yAn8LTpR7o31zl7RnrZzIO/Untitled-(Copy).
+
+## Tecnologias utilizadas.
+- Figma para o desenvolvimento da interface.
+- Desenvolvimento Front-end: JavaScript, React, Hooks, Redux e Bootstrap.
 
 ## Requisitos do projeto.
 ### Desenvolvimento das telas do Usuário.
-#### - Tela de Login 
- 
-  - [ x ] 1 - Input do Número de celular"
-  - [ x ] 2 - botão "Vamos Lá".
-  - [ x ] 3 - Logo no canto superior esquerdo.
-  - [ x ] 4 - Logo marca no centro da página.
-  - [ x ] 5 - Responsividade
-   
+#### - Página de Login 
+#### - Página de Cadastro
+#### - Página de Cardápio
   
  ---
   
-#### Página de cadastro
     
 
 ### Desenvolvimento das telas do Estabelecimento.
