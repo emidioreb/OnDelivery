@@ -1,38 +1,39 @@
-const imgBurguer = 'imagens/burguer.jpg';
+import imgBurguer from '../imagens/burguer.png';
+
 const menuBurguers = [
   {
     token: 101,
     title: 'Onburguer',
     storyline: 'Delicioso burger de 180g, com queijo, bacon e molho da casa.',
-    price: 4.5,
+    price: 19.90,
     imagePath: imgBurguer,
   },
   {
     token: 102,
-    title: 'Final Fantasy',
-    storyline: 'A help of a ragtag team of soldiersion of alien phantoms.',
-    price: 4.5,
+    title: 'Burguer Duplo',
+    storyline: '2X deliciosos burgeres de 100g, com queijo, bacon e molho da casa.',
+    price: 22.90,
     imagePath: imgBurguer,
   },
   {
     token: 103,
-    title: 'Ghost In The Shell',
-    storyline: 'A hachutner. This film is a revised versif Ghost in the Shell (1995).',
-    price: 5,
+    title: 'Smash Simples',
+    storyline: '1X deliciosos 50g, 2 fatias de queijo cheddar e molho especial da casa.',
+    price: 15.90,
     imagePath: imgBurguer,
   },
   {
     token: 104,
-    title: 'Appleseed Alpha',
-    storyline: 'A yortneans future hope, the legendary city of Olympus.',
-    price: 3.8,
+    title: 'Smash Duplo',
+    storyline: '2X deliciosos 50g, 2 fatias de queijo cheddar e molho especial da casa.',
+    price: 17.90,
     imagePath: imgBurguer,
   },
   {
     token: 105,
-    title: 'Resident Evil',
-    storyline: 'A young fve through thearcof Olympus.',
-    price: 4.2,
+    title: 'Smash Triplo',
+    storyline: '3X deliciosos 50g, 2 fatias de queijo cheddar e molho especial da casa.',
+    price: 19.90,
     imagePath: imgBurguer,
   },
 ];

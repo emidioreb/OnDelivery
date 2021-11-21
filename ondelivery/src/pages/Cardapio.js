@@ -1,11 +1,27 @@
 import React from 'react';
+import CardCardapio from '../components/CardCardapio';
+import Footer from '../components/Footer';
 import Header from '../components/Header';
+import menuBurguers from '../services/burguersData';
+import '../css/Cardapio.css';
 
 function Cardapio() {
   return (
     <div>
       <Header />
-      <h1>Cardapio</h1>
+      <div className="center-cardapio">
+        {
+          menuBurguers.map((item) => (
+            <CardCardapio
+              key={ item.token }
+              image={ item.imagePath }
+              titulo={ item.title }
+              preco={ item.price }
+              descricao={ item.storyline }
+            />))
+        }
+      </div>
+      <Footer />
     </div>
   );
 }
