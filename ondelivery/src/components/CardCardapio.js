@@ -11,7 +11,9 @@ function CardCardapio({ image, titulo, descricao, preco }) {
         <p className="descricaoCard">{descricao}</p>
       </div>
       <div className="precoCard">
-        <h3 className="preco">{`+ R$ ${preco}`}</h3>
+        <button type="button" className="preco">
+          <h3>{`+ R$ ${preco}`}</h3>
+        </button>
       </div>
     </div>
   );

@@ -4,12 +4,14 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import menuBurguers from '../services/burguersData';
 import '../css/Cardapio.css';
+import Categorias from '../components/Categorias';
 
 function Cardapio() {
   return (
     <div>
       <Header />
       <div className="center-cardapio">
+        <Categorias />
         {
           menuBurguers.map((item) => (
             <CardCardapio
