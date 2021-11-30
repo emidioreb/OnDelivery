@@ -21,8 +21,7 @@ body{
   flex-direction: column;
 }
 
-#submit-login{
-  /* border: 2px solid black; */
+.submit-login{
   background-color: #E5E5E5;
   border: 10px solid #E5E5E5;
   padding: 1px 90px;
@@ -33,6 +32,33 @@ body{
   font-style: normal;
   font-weight: bold;
   line-height: 22px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.submit-login span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.submit-login span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.submit-login:hover span {
+  padding-right: 25px;
+}
+
+.submit-login:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 #label-input-login{
@@ -147,4 +173,48 @@ body{
   font-size: 18px;
   line-height: 22px;
   color: #000000;
+}
+
+.submit-Cadastro{
+    background-color: #f4511e;
+    border: 10px solid #f4511e;
+    border-radius: 30px;
+    color: #E5E5E5;
+    font-size: 18px ;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    line-height: 22px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.contain-submit-cadastro{
+  display: flex;
+  justify-content: center;
+}
+
+.submit-Cadastro span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.submit-Cadastro span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.submit-Cadastro:hover span {
+  padding-right: 25px;
+}
+
+.submit-Cadastro:hover span:after {
+  opacity: 1;
+  right: 0;
 }

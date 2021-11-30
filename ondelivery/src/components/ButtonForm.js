@@ -6,8 +6,10 @@ class ButtonForm extends React.Component {
     const { label, id } = this.props;
     return (
       <div>
-        <button type="button" id={ id }>
-          { label }
+        <button type="button" className={ id }>
+          <span>
+            { label }
+          </span>
         </button>
       </div>
     );
