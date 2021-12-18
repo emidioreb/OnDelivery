@@ -90,7 +90,17 @@ function Cadastro() {
           onChange={ ({ target }) => setInfo({ ...info, celular: target.value }) }
         />
       </div>
-      <button type="button" onClick={ () => push('/cardapio') }>Eu tou com fome</button>
+      <div className="contain-submit-cadastro">
+        <button
+          type="button"
+          onClick={ () => push('/cardapio') }
+          className="submit-Cadastro"
+        >
+          <span>
+            Eu estou com fome!
+          </span>
+        </button>
+      </div>
     </div>
   );
 }
