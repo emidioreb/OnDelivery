@@ -97,7 +97,7 @@ function Cadastro() {
           className="submit-Cadastro"
         >
           <span>
-            Eu estou com fome!
+            Quero comer!
           </span>
         </button>
       </div>
