@@ -1,9 +1,14 @@
 import React from 'react';
+// import imgSacola from '../imagens/sacola.png';
 
 function Footer() {
   return (
     <div>
-      <h1>total</h1>
+      <div className="footerTotal">
+        {/* <img className="imgSacola" src={ imgSacola } alt="sacola" width={ 80 } /> */}
+        <h3>Ver sacola</h3>
+        <h3>Valor</h3>
+      </div>
     </div>
   );
 }
