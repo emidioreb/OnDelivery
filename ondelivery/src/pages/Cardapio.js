@@ -26,8 +26,9 @@ function Cardapio() {
       <div className="center-cardapio">
         <Categorias />
         {
-          categoriaEscolhida().map((item) => (
+          categoriaEscolhida().map((item, index) => (
             <CardCardapio
+              index={ index }
               key={ item.token }
               image={ item.imagePath }
               titulo={ item.title }

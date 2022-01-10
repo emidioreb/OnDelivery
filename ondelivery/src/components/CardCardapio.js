@@ -2,12 +2,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import '../css/Cardapio.css';
 
-function CardCardapio({ image, titulo, descricao, preco }) {
+function CardCardapio({ image, titulo, descricao, preco, index }) {
   return (
     <div className="cardCardapio">
       <div className="textos-card">
         <div>
-          <h3 className="tituloCard">{titulo}</h3>
+          <h3 className="tituloCard">{`${index + 1}. ${titulo}`}</h3>
           <p className="descricaoCard">{descricao}</p>
         </div>
         <div className="precoCard">
@@ -24,6 +24,7 @@ function CardCardapio({ image, titulo, descricao, preco }) {
 CardCardapio.propTypes = {
   descricao: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
+  index: PropTypes.number.isRequired,
   preco: PropTypes.number.isRequired,
   titulo: PropTypes.string.isRequired,
 };
